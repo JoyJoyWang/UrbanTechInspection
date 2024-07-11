@@ -1,0 +1,224 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  height: 100%;
+  /* overflow: auto; */
+}
+.content-container {
+  flex-direction: column;
+  height: 100%;
+  /* overflow: auto; */
+}
+.content {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.pictures {
+list-style: none;
+padding: 0;
+}
+.pictures li {
+cursor: pointer;
+position: relative;
+display: flex;
+align-items: center;
+padding: 10px;
+border-bottom: 1px solid #ddd;
+align-items: center; 
+gap: 10px; 
+max-width: 100%;
+}
+.pictures .selected {
+border: 2px solid var(--bs-emphasis-color);
+}
+.pictures li img {
+max-width: 110px;
+height: auto;
+}
+
+.content.active {
+display: block;
+}
+
+.bg-body-tertiary {
+      max-height: 70vh;
+      flex: 1;
+      /* display: flex; */
+      flex-direction: column;
+      overflow-y: auto;
+      
+  }
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .btn-bd-primary {
+    --bd-violet-bg: #712cf9;
+    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet-bg);
+    --bs-btn-border-color: var(--bd-violet-bg);
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #6528e0;
+    --bs-btn-hover-border-color: #6528e0;
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #5a23c8;
+    --bs-btn-active-border-color: #5a23c8;
+  }
+
+  .bd-mode-toggle {
+    z-index: 1500;
+  }
+
+  .bd-mode-toggle .dropdown-menu .active .bi {
+    display: block !important;
+  }
+
+  
+.image-comparison {
+  max-width: 100%;
+  /* max-height: 400px; */
+  margin: 10px;
+  border-radius: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.image-comparison img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.image-comparison .images-container {
+  position: relative;
+  display: flex;
+}
+
+.image-comparison .images-container .before-image {
+  position: absolute;
+  top: 0;
+  width: 50%;
+}
+
+.image-comparison .slider {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-comparison .slider-line {
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.image-comparison .slider-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  transform: translate(-50%, -50%) rotateZ(90deg);
+}
+
+
+body {
+  background-color: #f8f9fa;
+}
+.content {
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  /* margin-bottom: 10px; */
+}
+.card {
+  background: #f0f0f0;
+  padding: 20px;
+  margin-top: 5px;
+  border-radius: 8px;
+}
+.form-control, .form-check-label, .form-label {
+  margin-bottom: 5px;
+}
+.form-label {
+  font-size: 12px; 
+}
+.form-check-label {
+  font-size: 12px;
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.btn {
+  width: 200px; /* Adjust this value as needed */
+}
+.log-output {
+  background: #e9ecef;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-height: 400px;
+  overflow-y: auto;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content, .log-section {
+  flex: 1;
+  margin: 10px;
+}
+.log-section {
+  max-width: 300px;
+}

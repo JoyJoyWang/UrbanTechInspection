@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.about-section {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.about-section .logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+}
+
+.about-section .background-img {
+  width: 100%;
+  height: auto;
+}
+
+.text-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(231,228,228,.95);
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 90px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1.1em;
+}
+
+.text-content p {
+  margin: 20px auto;
+}
