@@ -169,19 +169,15 @@ To be completed. The plan is to use the Flask framework to convert the models in
 
 ### 3.1\. Clone the Project
 
-bash
-
 
 ```
-git clone https://github.com/your_username/your_project.git
-cd your_project
+git clone https://github.com/JoyJoyWang/UrbanTechInspection.git
+cd UrbanTechInspection
 ```
 
 ### 3.2 Create and Activate a Virtual Environment
 
 Create a virtual environment using `venv`:
-
-bash
 
 
 ```
@@ -192,16 +188,12 @@ Activate the virtual environment:
 
 For Windows users:
 
-bash
-
 
 ```
 .\ssa-ut\Scripts\activate
 ```
 
 For MacOS/Linux users:
-
-bash
 
 
 ```
@@ -211,8 +203,6 @@ source ssa-ut/bin/activate
 ### 3.3\. Install Dependencies
 
 Install dependencies in the activated virtual environment:
-
-bash
 
 
 ```
@@ -224,8 +214,6 @@ pip install -r requirements.txt
 Place the image data to be processed into the `data` folder under the `SSA-UT-model` directory.
 
 Download the SAM checkpoint and place it into the `ckp` folder:
-
-bash
 
 
 ```
@@ -240,8 +228,6 @@ Download the Unet-vgg16 checkpoint [here](https://drive.google.com/file/d/1wA2eA
 
 (1) Use `UI2.py` to set hyperparameters and run. (2) Or run from the command line:
 
-bash
-
 
 ```
 python main.py --data_dir ./data --out_dir ./output --ckpt_path ./ckp/sam_vit_h_4b8939.pth --save_img --save_json
@@ -249,9 +235,30 @@ python main.py --data_dir ./data --out_dir ./output --ckpt_path ./ckp/sam_vit_h_
 
 In `infer_crack.py`, default hyperparameters are set. To adjust hyperparameters via command line, run:
 
-bash
-
 
 ```
 python infer_crack.py -img_dir ./data/images -model_path ./models/crack_detection_model.pth -model_type vgg16 -out_viz_dir ./output/visualization -out_pred_dir ./output/predictions -threshold 0.1
 ```
+
+### 3.6 Run Web App 
+
+```
+cd sst-app
+```
+
+#### Setup Node.js Environment
+
+1. **Install Node.js packages:**
+
+   ```
+   npm install
+   ```
+
+2. **Run the Node.js server:**
+
+   ```
+   node server.js
+   ```
+
+Then, server is running on http://localhost:3000, click to preview the web.
+
